@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohrdommel - Submarine Cable Protection</title>
+    <meta name="description" content="AI-powered early warning system for submarine cables. Prevent $5M failures with 24-48 hour advance threat detection.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0f3460 0%, #16537e 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #0f3460;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            color: #0f3460;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .problem {
+            background: #f8f9fa;
+        }
+        
+        .problem ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .problem li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .problem li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        
+        .solution {
+            background: white;
+        }
+        
+        .how-it-works {
+            background: #f8f9fa;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            padding: 15px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        .steps li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 15px;
+            background: #0f3460;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .results {
+            background: #e7f3ff;
+            border-left: 4px solid #0f3460;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .results h3 {
+            color: #0f3460;
+            margin-bottom: 15px;
+        }
+        
+        .results ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .results li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .results li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16537e;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: white;
+        }
+        
+        form {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #0f3460;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0f3460;
+        }
+        
+        button {
+            background: #0f3460;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        button:hover {
+            background: #16537e;
+        }
+        
+        footer {
+            background: #0f3460;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            header p {
+                font-size: 1.1em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Prevent $5M Cable Failures</h1>
+            <p>AI-powered early warning for submarine cables</p>
+            <a href="#contact" class="cta-button">Request Free Pilot</a>
+        </div>
+    </header>
+
+    <section class="problem">
+        <div class="container">
+            <h2>The Problem</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">Submarine cable failures are catastrophic and expensive.</p>
+            <ul>
+                <li><strong>$1-5M per incident</strong> plus weeks of downtime</li>
+                <li><strong>40% caused by vessels</strong> – fishing gear and ship anchors</li>
+                <li><strong>150-200 failures per year</strong> globally</li>
+                <li><strong>Current monitoring is reactive</strong> – you find out after damage occurs</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2>The Solution</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                Real-time AI monitoring of vessel movements near your cables.
+            </p>
+            <p style="font-size: 1.1em;">
+                We detect threats <strong>24-48 hours before damage occurs</strong>, 
+                giving you time to contact vessels, dispatch patrols, and prevent failures.
+            </p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <ol class="steps">
+                <li>We track vessels near your cables using real-time AIS data</li>
+                <li>AI identifies risky behavior – stopped vessels, fishing activity, slow-moving traffic</li>
+                <li>You receive alerts 24-48 hours before situations become critical</li>
+                <li>You respond: contact vessel via VHF, request Coast Guard assistance, or dispatch patrol</li>
+                <li>Prevent damage before it happens</li>
+            </ol>
+            
+            <div class="results">
+                <h3>Early Results – 14 Days Monitoring Gibraltar Strait</h3>
+                <ul>
+                    <li>18 vessel threats detected</li>
+                    <li>100% detection rate</li>
+                    <li>3.2 hour average lead time before critical situations</li>
+                    <li>2 CRITICAL events (vessels stopped within 500m of cable)</li>
+                    <li><strong>ROI: 100x if system prevents just 1 failure per year</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Free 30-Day Pilot</h2>
+            <p style="font-size: 1.1em; text-align: center; margin-bottom: 30px;">
+                Prove value on your cable. No cost, no commitment.<br>
+                If it works, we discuss pricing. If not, we part as friends.
+            </p>
+            
+            <form action="https://formspree.io/f/xrbwylgg" method="POST">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="company" required>
+                
+                <label for="cable">Which cable(s) are you interested in monitoring?</label>
+                <textarea id="cable" name="cable" rows="4"></textarea>
+                
+                <button type="submit">Request Pilot</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Rohrdommel</strong></p>
+            <p>Submarine Cable Protection</p>
+            <p><a href="mailto:hello@rohrdommel.com">hello@rohrdommel.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
